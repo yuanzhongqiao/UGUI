@@ -1,28 +1,26 @@
-# Introduction
-## What is µGUI?
-µGUI is a free and open source graphic library for embedded systems. It is platform-independent
-and can be easily ported to almost any microcontroller system. As long as the display is capable
-of showing graphics, µGUI is not restricted to a certain display technology. Therefore, display
-technologies such as LCD, TFT, E-Paper, LED or OLED are supported. The whole module
-consists of three files: **ugui.c**, **ugui.h** and **ugui_config.h**.
-
-## µGUI Features
-* µGUI supports any color, grayscale or monochrome display
-* µGUI supports any display resolution
-* µGUI supports multiple different displays
-* µGUI supports any touch screen technology (e.g. AR, PCAP)
-* µGUI supports windows and objects (e.g. button, textbox)
-* µGUI supports platform-specific hardware acceleration
-* 16 different fonts available
-* cyrillic fonts supported
-* TrueType font converter available ([https://github.com/AriZuu](https://github.com/AriZuu))
-* integrated and free scalable system console
-* basic geometric functions (e.g. line, circle, frame etc.)
-* can be easily ported to almost any microcontroller system
-* no risky dynamic memory allocation required
-
-## µGUI Requirements
-µGUI is platform-independent, so there is no need to use a certain embedded system. In order to
-use µGUI, only two requirements are necessary:
-* a C-function which is able to control pixels of the target display.
-* integer types for the target platform have to be adjusted in ugui_config.h.
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">介绍</font></font></h1><a id="user-content-introduction" class="anchor" aria-label="永久链接：简介" href="#introduction"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI是什么？</font></font></h2><a id="user-content-what-is-µgui" class="anchor" aria-label="永久链接：什么是 µGUI？" href="#what-is-µgui"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI 是一个用于嵌入式系统的免费开源图形库。</font><font style="vertical-align: inherit;">它独立于平台，可以轻松移植到几乎任何微控制器系统。</font><font style="vertical-align: inherit;">只要显示器能够显示图形，μGUI就不受特定显示技术的限制。</font><font style="vertical-align: inherit;">因此，支持 LCD、TFT、E-Paper、LED 或 OLED 等显示技术。</font><font style="vertical-align: inherit;">整个模块由三个文件组成：</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ugui.c</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ugui.h</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ugui_config.h</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI 特性</font></font></h2><a id="user-content-µgui-features" class="anchor" aria-label="永久链接：μGUI 功能" href="#µgui-features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI 支持任何彩色、灰度或单色显示</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI支持任何显示分辨率</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI支持多种不同的显示器</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI支持任何触摸屏技术（例如AR、PCAP）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI 支持窗口和对象（例如按钮、文本框）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI 支持特定于平台的硬件加速</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">16 种不同的字体可供选择</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持西里尔字母字体</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可用 TrueType 字体转换器 ( </font></font><a href="https://github.com/AriZuu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://github.com/AriZuu</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">集成且可免费扩展的系统控制台</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基本几何函数（例如线、圆、框等）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以轻松移植到几乎任何微控制器系统</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不需要有风险的动态内存分配</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI 要求</font></font></h2><a id="user-content-µgui-requirements" class="anchor" aria-label="永久链接：μGUI 要求" href="#µgui-requirements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">µGUI 是平台无关的，因此不需要使用特定的嵌入式系统。</font><font style="vertical-align: inherit;">为了使用 µGUI，只需要两个要求：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">能够控制目标显示器像素的 C 函数。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">必须在 ugui_config.h 中调整目标平台的整数类型。</font></font></li>
+</ul>
+</article></div>
